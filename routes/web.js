@@ -19,4 +19,32 @@ router.get('/', async (req, res) =>{
     }
 })
 
+router.get('/login', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('auth/login', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('auth/login', {
+            data: []
+        })
+    }
+})
+
+router.get('/signup', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('auth/signup', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('auth/signup', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
