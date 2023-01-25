@@ -47,4 +47,18 @@ router.get('/signup', async (req, res) =>{
     }
 })
 
+router.get('/form', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('auth/form', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('auth/form', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
