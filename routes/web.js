@@ -5,21 +5,21 @@ const path = require('path')
 const fs = require('fs')
 router.use(express.json());
 
-router.get('/', async (req, res) =>{
-    try {
-        let data = await db.jobs.getAll()
-        res.render('index', {
-            jobs: data.data
-        })
-    } catch (error) {
-        console.log(error);
-        res.render('index', {
-            data: []
-        })
-    }
-})
+// router.get('/', async (req, res) =>{
+//     try {
+//         let data = await db.jobs.getAll()
+//         res.render('index', {
+//             jobs: data.data
+//         })
+//     } catch (error) {
+//         console.log(error);
+//         res.render('index', {
+//             data: []
+//         })
+//     }
+// })
 
-router.get('/login', async (req, res) =>{
+router.get('/', async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
         res.render('auth/login', {
