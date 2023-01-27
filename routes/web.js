@@ -61,4 +61,18 @@ router.get('/form', async (req, res) =>{
     }
 })
 
+router.get('/home', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('auth/home', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('auth/home', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
