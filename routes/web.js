@@ -5,21 +5,21 @@ const path = require('path')
 const fs = require('fs')
 router.use(express.json());
 
-// router.get('/', async (req, res) =>{
-//     try {
-//         let data = await db.jobs.getAll()
-//         res.render('index', {
-//             jobs: data.data
-//         })
-//     } catch (error) {
-//         console.log(error);
-//         res.render('index', {
-//             data: []
-//         })
-//     }
-// })
-
 router.get('/', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('home', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('home', {
+            data: []
+        })
+    }
+})
+
+router.get('/login', async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
         res.render('auth/login', {
@@ -50,26 +50,12 @@ router.get('/signup', async (req, res) =>{
 router.get('/form', async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
-        res.render('auth/form', {
+        res.render('panel/form', {
             jobs: data.data
         })
     } catch (error) {
         console.log(error);
-        res.render('auth/form', {
-            data: []
-        })
-    }
-})
-
-router.get('/home', async (req, res) =>{
-    try {
-        let data = await db.jobs.getAll()
-        res.render('auth/home', {
-            jobs: data.data
-        })
-    } catch (error) {
-        console.log(error);
-        res.render('auth/home', {
+        res.render('panel/form', {
             data: []
         })
     }
