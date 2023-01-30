@@ -20,9 +20,9 @@
 
     {{> HeaderNew}}
 
-    <div class="w-full md:fixed md:mt-[76px]">
+    <div class="w-full fixed top-0 left-0 mt-[70px] md:mt-[76px] z-40">
         <nav class="m-4">
-            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center bg-green-500">
+            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center bg-green-500 shadow-lg">
                 <div class="flex w-full items-center justify-center">
                     <div class="w-full justify-center flex">
                         s
@@ -36,56 +36,115 @@
                 </div>
             </div>
         </nav>
-        
-        <aside class="m-4">
-            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center border-2">
+    </div>
+
+
+    <div class="w-full md:fixed mt-[178px] md:w-1/4 absolute top-0 left-6">
+        <aside class="m-4 md:m-2">
+            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center border-2 md:flex-wrap scroll-auto">
                 <div class="flex w-full items-center justify-center">
                     <div class="w-full justify-center flex">
                         <div class="w-full">
                             <div>
-                                <h1 class="text-center">
+                                <h1 class="text-center font-medium">
                                     Tipos de trabajo
                                 </h1>
                                 <img src="" alt="" srcset="">
                             </div>
 
-                            <div class="w-full justify-between flex place-items-center my-4">
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
                                 <div class="flex justify-start">
                                     <label class="checkbox">
                                         <input type="checkbox" id="fTJCheck" class="checkbox__input hidden"/>
                                         <span class="checkbox__inner"></span>
                                     </label>
-                                    <label for="fTJCheck" class="ml-2">Trabajos de tiempo completo</label>
+                                    <label for="fTJCheck" class="ml-2 text-sm md:text-xs pt-[2px]">Trabajos de tiempo completo</label>
                                 </div>
                                 <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2">58</span>
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">21</span>
                                 </div>
                             </div>
                             
-                            <div class="w-full justify-between flex place-items-center my-4">
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
                                 <div class="flex justify-start">
                                     <label class="checkbox">
                                         <input type="checkbox" id="pTJCheck" class="checkbox__input hidden"/>
                                         <span class="checkbox__inner"></span>
                                     </label>
-                                    <label for="pTJCheck" class="ml-2">Trabajos de medio tiempo</label>
+                                    <label for="pTJCheck" class="ml-2 text-sm md:text-xs">Trabajos de medio tiempo</label>
                                 </div>
                                 <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2">58</span>
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">10</span>
                                 </div>
                             </div>
                             
-                            <div class="w-full justify-between flex place-items-center my-4">
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
                                 <div class="flex justify-start">
                                     <label class="checkbox">
-                                        <input type="checkbox" id="pTJCheck" class="checkbox__input hidden"/>
+                                        <input type="checkbox" id="rJCheck" class="checkbox__input hidden"/>
                                         <span class="checkbox__inner"></span>
                                     </label>
-                                    <label for="pTJCheck" class="ml-2">Trabajos remotos</label>
+                                    <label for="rJCheck" class="ml-2 text-sm md:text-xs">Trabajos remotos</label>
                                 </div>
                                 <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2">58</span>
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">3</span>
                                 </div>
+                            </div>
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
+                                <div class="flex justify-start">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="iJCheck" class="checkbox__input hidden"/>
+                                        <span class="checkbox__inner"></span>
+                                    </label>
+                                    <label for="iJCheck" class="ml-2 text-sm md:text-xs">Trabajos de pasantía</label>
+                                </div>
+                                <div class="flex justify-end">
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">55</span>
+                                </div>
+                            </div>
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
+                                <div class="flex justify-start">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="cJCheck" class="checkbox__input hidden"/>
+                                        <span class="checkbox__inner"></span>
+                                    </label>
+                                    <label for="cJCheck" class="ml-2 text-sm md:text-xs">Trabajos por contrato</label>
+                                </div>
+                                <div class="flex justify-end">
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">37</span>
+                                </div>
+                            </div>
+                            <div class="w-full justify-between flex place-items-center my-4 md:my-2">
+                                <div class="flex justify-start">
+                                    <label class="checkbox">
+                                        <input type="checkbox" id="tJCheck" class="checkbox__input hidden"/>
+                                        <span class="checkbox__inner"></span>
+                                    </label>
+                                    <label for="tJCheck" class="ml-2 text-sm md:text-xs">Trabajos para formación</label>
+                                </div>
+                                <div class="flex justify-end">
+                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="w-full justify-center flex my-4 md:my-2">
+                    <div class="w-full">
+                        <h1 class="text-center font-medium">
+                            Rangos de salario
+                        </h1>
+
+                        <div class="w-full justify-between place-items-center my-4 md:my-2">
+                            <input id="default-range" type="range" value="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+                        </div>
+                        <div class="w-full justify-between place-items-center flex">
+                            <div class="flex justify-start">
+                                <span class="text-sm">$0.00</span>
+                            </div>
+                            <div class="flex justify-end">
+                                <span class="text-sm">$1000+</span>
                             </div>
                         </div>
                     </div>
@@ -94,6 +153,48 @@
         </aside>
     </div>
 
+    <div class="w-4/6 pt-[178px] h-full absolute top-0 right-9">
+        <div class="flex flex-row justify-between">
+            <h2 class="text-lg font-semibold">
+                Mostrando 134 trabajos
+            </h2>
+            <h2>
+                <select name="filterJobs" id="filterJobs">
+                    <option value="1" selected>Más reciente</option>
+                    <option value="2">Más antigua</option>
+                    <option value="3">Mayor salario</option>
+                    <option value="4">Menor salario</option>
+                </select>
+            </h2>
+        </div>
+        <div class="flex flex-wrap gap-8">
+            <div class="bg-slate-100 w-56 h-56 flex flex-col relative">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear digitalmente y elegantemen...
+                    </p>
+                </div>
+                <div class="flex flex-row justify-evenly absolute top-40 left-0">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs">
+                        TIempo completo
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
         <br>
         <br>
         <br>
