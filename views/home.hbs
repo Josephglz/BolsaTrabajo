@@ -38,10 +38,18 @@
         </nav>
     </div>
 
+    <div class="w-full fixed top-0 left-0 mt-[70px] md:mt-[50px] z-10">
+        <nav class="m-4">
+            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center bg-white">
+
+            </div>
+        </nav>
+    </div>
+
 
     <div class="w-full md:fixed mt-[178px] md:w-1/4 absolute top-0 left-6">
         <aside class="m-4 md:m-2">
-            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center border-2 md:flex-wrap scroll-auto">
+            <div class="container w-full px-6 py-4 mx-auto md:flex md:justify-center md:items-center border-2 md:flex-wrap scroll-auto rounded-md">
                 <div class="flex w-full items-center justify-center">
                     <div class="w-full justify-center flex">
                         <div class="w-full">
@@ -60,8 +68,8 @@
                                     </label>
                                     <label for="fTJCheck" class="ml-2 text-sm md:text-xs pt-[2px]">Trabajos de tiempo completo</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">21</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">21</span>
                                 </div>
                             </div>
                             
@@ -73,8 +81,8 @@
                                     </label>
                                     <label for="pTJCheck" class="ml-2 text-sm md:text-xs">Trabajos de medio tiempo</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">10</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">10</span>
                                 </div>
                             </div>
                             
@@ -86,8 +94,8 @@
                                     </label>
                                     <label for="rJCheck" class="ml-2 text-sm md:text-xs">Trabajos remotos</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">3</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">3</span>
                                 </div>
                             </div>
                             <div class="w-full justify-between flex place-items-center my-4 md:my-2">
@@ -98,8 +106,8 @@
                                     </label>
                                     <label for="iJCheck" class="ml-2 text-sm md:text-xs">Trabajos de pasantía</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">55</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">55</span>
                                 </div>
                             </div>
                             <div class="w-full justify-between flex place-items-center my-4 md:my-2">
@@ -110,8 +118,8 @@
                                     </label>
                                     <label for="cJCheck" class="ml-2 text-sm md:text-xs">Trabajos por contrato</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">37</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">37</span>
                                 </div>
                             </div>
                             <div class="w-full justify-between flex place-items-center my-4 md:my-2">
@@ -122,8 +130,8 @@
                                     </label>
                                     <label for="tJCheck" class="ml-2 text-sm md:text-xs">Trabajos para formación</label>
                                 </div>
-                                <div class="flex justify-end">
-                                    <span class="bg-[#E1EBFB] p-2 md:px-2 md:py-1">10</span>
+                                <div class="flex justify-center">
+                                    <span class="bg-[#E1EBFB] w-8 h-8 text-center text-xs pt-2">10</span>
                                 </div>
                             </div>
                         </div>
@@ -154,12 +162,12 @@
     </div>
 
     <div class="w-4/6 pt-[178px] h-full absolute top-0 right-9">
-        <div class="flex flex-row justify-between">
+        <div class="flex flex-row justify-between pb-4">
             <h2 class="text-lg font-semibold">
                 Mostrando 134 trabajos
             </h2>
             <h2>
-                <select name="filterJobs" id="filterJobs">
+                <select name="filterJobs" id="filterJobs" class="h-8 text-xs appearance-none border-none">
                     <option value="1" selected>Más reciente</option>
                     <option value="2">Más antigua</option>
                     <option value="3">Mayor salario</option>
@@ -167,14 +175,14 @@
                 </select>
             </h2>
         </div>
-        <div class="flex flex-wrap gap-8">
-            <div class="bg-slate-100 w-56 h-56 flex flex-col relative">
+        <div class="flex flex-wrap gap-6 justify-center">
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
                 <div class="flex flex-row justify-between relative">
                     <div>
                         <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
                     </div>
                     <div>
-                        <p class="absolute text-5xl -top-6 right-0 text-gray-400">
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
                             ...
                         </p>
                     </div>
@@ -184,13 +192,192 @@
                         Diseñador de UI / UX
                     </p>
                     <p class="text-xs leading-relaxed">
-                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear digitalmente y elegantemen...
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
                     </p>
                 </div>
-                <div class="flex flex-row justify-evenly absolute top-40 left-0">
-                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs">
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
                         TIempo completo
                     </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
+                </div>
+            </div>
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        TIempo completo
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
+                </div>
+            </div>
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        TIempo completo
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
+                </div>
+            </div>
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        TIempo completo
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
+                </div>
+            </div>
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        TIempo completo
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
+                </div>
+            </div>
+            <div class="bg-slate-100 w-64 h-w-64 flex flex-col relative rounded-md mb-2 shadow-md">
+                <div class="flex flex-row justify-between relative">
+                    <div>
+                        <img src="/images/250x250.png" class="h-[25%] m-2 rounded-lg" alt="">
+                    </div>
+                    <div>
+                        <p class="absolute text-5xl -top-6 right-0 text-gray-400 pr-2">
+                            ...
+                        </p>
+                    </div>
+                </div>
+                <div class="w-full h-full absolute top-16 left-0 pt-2 px-2">
+                    <p class="font-medium">
+                        Diseñador de UI / UX
+                    </p>
+                    <p class="text-xs leading-relaxed">
+                        El trabajo de Diseñador de Experiencia de Usuario se desempeña para diseñar y crear...
+                    </p>
+                </div>
+                <div class="flex flex-row flex-wrap justify-center absolute top-36 left-0 px-2 w-full gap-2">
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        TIempo completo
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Nivel Senior
+                    </p>
+                    <p class="py-1 px-2 bg-blue-300 text-blue-600 text-xs rounded-md">
+                        Experiencia Min. 1 año
+                    </p>
+                </div>
+                <div class="absolute top-52 left-0 flex justify-center w-full">
+                    <button type="button" class="text-xs py-2 px-4 bg-blue-600 text-white rounded-md">Contactar</button>
                 </div>
             </div>
         </div>
