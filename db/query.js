@@ -2,6 +2,8 @@ const {
     pool
 } = require('./connection');
 const util = require('util');
+const bcrypt = require('bcrypt')
+const salts = 10
 
 const query = util.promisify(pool.query).bind(pool);
 
@@ -21,14 +23,36 @@ const result = (resultado) => {
 }
 
 const users = {
-    getAll: async () => {
+    validate: async (data) => {
         try {
-            const queryResult = await query(`SELECT * FROM USERS_T`);
-            return result(queryResult);
+            const queryResult = await query(`SELECT PASSWORD_U FROM USERS_T WHERE MAIL_U = ?`, [data.email]);
+            if(queryResult.length) {
+                bcrypt.compare(queryResult[0].PASSWORD_U, data.password, function(err, result) {
+                    if(result) {
+                        console.log('El usuario coincide');
+                    } else {
+                        console.log('El usuario no coincide');
+                    }
+                });
+            } else {
+                return {
+                    status: 0,
+                    message: 'El usuario no se ha localizado'
+                }
+            }
         } catch (error) {
             throw error
         }
     },
+    insert: async (data) => {
+        try {
+            const queryResult = await query(`
+                INSERT INTO USERS_T (NAME_U, MAIL_U, PASSWORD_U, ROLE_U, CREATION_U, UPDATE_U) VALUES (?, ?, ?, ?, now(), now())
+            `, [data.name, data.email, data.password, data.role]);
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 const jobs = {
