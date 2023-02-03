@@ -5532,6 +5532,10 @@ input[type="number"]::-webkit-inner-spin-button,
     width: auto;
   }
 
+  .md\:w-\[337px\] {
+    width: 337px;
+  }
+
   .md\:translate-x-0 {
     --tw-translate-x: 0px;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5602,6 +5606,30 @@ input[type="number"]::-webkit-inner-spin-button,
     width: 24rem;
   }
 
+  .lg\:w-5\/6 {
+    width: 83.333333%;
+  }
+
+  .lg\:w-7\/12 {
+    width: 58.333333%;
+  }
+
+  .lg\:w-9\/12 {
+    width: 75%;
+  }
+
+  .lg\:w-\[80\%\] {
+    width: 80%;
+  }
+
+  .lg\:w-\[78\%\] {
+    width: 78%;
+  }
+
+  .lg\:w-\[77\%\] {
+    width: 77%;
+  }
+
   .lg\:translate-y-\[25\%\] {
     --tw-translate-y: 25%;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
@@ -5622,5 +5650,17 @@ input[type="number"]::-webkit-inner-spin-button,
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:w-\[78\%\] {
+    width: 78%;
+  }
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:w-\[78\%\] {
+    width: 78%;
   }
 }
