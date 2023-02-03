@@ -7,7 +7,7 @@ router.use(express.json());
 
 router.get('/', async (req, res) =>{
     try {
-        let data = await db.jobs.getAll()
+        // let data = await db.jobs.getAll()
         res.render('home', {
             jobs: data.data
         })

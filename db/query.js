@@ -2,8 +2,6 @@ const {
     pool
 } = require('./connection');
 const util = require('util');
-const bcrypt = require('bcrypt')
-const salts = 10
 
 const query = util.promisify(pool.query).bind(pool);
 
@@ -27,13 +25,6 @@ const users = {
         try {
             const queryResult = await query(`SELECT PASSWORD_U FROM USERS_T WHERE MAIL_U = ?`, [data.email]);
             if(queryResult.length) {
-                bcrypt.compare(queryResult[0].PASSWORD_U, data.password, function(err, result) {
-                    if(result) {
-                        console.log('El usuario coincide');
-                    } else {
-                        console.log('El usuario no coincide');
-                    }
-                });
             } else {
                 return {
                     status: 0,
