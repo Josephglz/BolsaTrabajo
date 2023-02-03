@@ -2,7 +2,7 @@ const {
     pool
 } = require('./connection');
 const util = require('util');
-const bcrypt = require('bcrypt')
+// const bcrypt = require('bcrypt')
 const salts = 10
 
 const query = util.promisify(pool.query).bind(pool);

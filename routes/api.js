@@ -1,8 +1,8 @@
 const express = require('express')
 const router = express.Router()
-const db = require('../db/query')
+// const db = require('../db/query')
 router.use(express.json());
-const bcrypt = require('bcrypt')
+// const bcrypt = require('bcrypt')
 const salts = 10
 
 router.post('/api/users/auth/validate', async (req, res) => {
