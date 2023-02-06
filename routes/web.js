@@ -1,12 +1,12 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../db/query')
-const { mddwhome } = require('../extras/mdw')
+const { mddwhome, mddLoadData } = require('../extras/mdw')
 const path = require('path')
 const fs = require('fs')
 router.use(express.json());
 
-router.get('/', async (req, res) =>{
+router.get('/', mddLoadData, async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
         res.render('home', {
@@ -20,11 +20,11 @@ router.get('/', async (req, res) =>{
     }
 })
 
-router.get('/login', mddwhome, async (req, res) => {
+router.get('/login', async (req, res) => {
     res.render('auth/login')
 })
 
-router.get('/panel', mddwhome, async (req, res) => {
+router.get('/panel', [mddwhome, mddLoadData], async (req, res) => {
     res.render('panel/form')
 })
 

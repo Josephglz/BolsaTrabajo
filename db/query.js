@@ -43,6 +43,18 @@ const users = {
         } catch (error) {
             throw error
         }
+    },
+    getUserData: async (id) => {
+        try {
+            const queryResult = await query(`SELECT * FROM USERS_T WHERE ID_U=?`, [id]);
+            return result(queryResult);
+        } catch (error) {
+            console.log(error);
+            return {
+                status: 0,
+                message: 'Error al obtener los datos del usuario'
+            }
+        }
     }
 }
 
