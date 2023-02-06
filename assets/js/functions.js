@@ -4,6 +4,6 @@ function validateEmail(email) {
 }
 
 function validatePassword(pass) {
-    const passRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?=.{8,20})/
+    const passRegex = /(?=.*[a-z])(?=.*[A-Z])(?=.{5,24})/
     return passRegex.test(pass)
 }

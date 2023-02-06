@@ -1,13 +1,14 @@
 const express = require('express')
 const router = express.Router()
 const db = require('../db/query')
+const { mddwhome } = require('../extras/mdw')
 const path = require('path')
 const fs = require('fs')
 router.use(express.json());
 
 router.get('/', async (req, res) =>{
     try {
-        // let data = await db.jobs.getAll()
+        let data = await db.jobs.getAll()
         res.render('home', {
             jobs: data.data
         })
@@ -19,33 +20,27 @@ router.get('/', async (req, res) =>{
     }
 })
 
-router.get('/login', async (req, res) =>{
-    try {
-        let data = await db.jobs.getAll()
-        res.render('auth/login', {
-            jobs: data.data
-        })
-    } catch (error) {
-        console.log(error);
-        res.render('auth/login', {
-            data: []
-        })
-    }
+router.get('/login', mddwhome, async (req, res) => {
+    res.render('auth/login')
 })
 
-router.get('/signup', async (req, res) =>{
-    try {
-        let data = await db.jobs.getAll()
-        res.render('auth/signup', {
-            jobs: data.data
-        })
-    } catch (error) {
-        console.log(error);
-        res.render('auth/signup', {
-            data: []
-        })
-    }
+router.get('/panel', mddwhome, async (req, res) => {
+    res.render('panel/form')
 })
+
+// router.get('/signup', async (req, res) =>{
+//     try {
+//         let data = await db.jobs.getAll()
+//         res.render('auth/signup', {
+//             jobs: data.data
+//         })
+//     } catch (error) {
+//         console.log(error);
+//         res.render('auth/signup', {
+//             data: []
+//         })
+//     }
+// })
 
 router.get('/form', async (req, res) =>{
     try {

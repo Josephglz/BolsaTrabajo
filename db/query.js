@@ -2,7 +2,9 @@ const {
     pool
 } = require('./connection');
 const util = require('util');
+const Cryptr = require('cryptr');
 
+const cryptr = new Cryptr('6lGeoNFgUnjyCjsT', {saltLength: 10 });
 const query = util.promisify(pool.query).bind(pool);
 
 const result = (resultado) => {
@@ -23,23 +25,21 @@ const result = (resultado) => {
 const users = {
     validate: async (data) => {
         try {
-            const queryResult = await query(`SELECT PASSWORD_U FROM USERS_T WHERE MAIL_U = ?`, [data.email]);
+            const queryResult = await query(`SELECT * FROM USERS_T WHERE MAIL_U=? AND STATUS_U <> 2`, [data.txtEmail]);
             if(queryResult.length) {
+                if(cryptr.decrypt(queryResult[0].PASSWORD_U) == data.txtPassword) {
+                    return {
+                        status: 1,
+                        message: 'Usuario valido',
+                        data: queryResult[0]
+                    }
+                }
             } else {
                 return {
                     status: 0,
-                    message: 'El usuario no se ha localizado'
+                    message: 'El correo ó contraseña no coinciden'
                 }
             }
-        } catch (error) {
-            throw error
-        }
-    },
-    insert: async (data) => {
-        try {
-            const queryResult = await query(`
-                INSERT INTO USERS_T (NAME_U, MAIL_U, PASSWORD_U, ROLE_U, CREATION_U, UPDATE_U) VALUES (?, ?, ?, ?, now(), now())
-            `, [data.name, data.email, data.password, data.role]);
         } catch (error) {
             throw error
         }
