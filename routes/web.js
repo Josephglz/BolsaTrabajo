@@ -112,4 +112,18 @@ router.get('/usuarios', async (req, res) =>{
     }
 })
 
+router.get('/home-admin', mddLoadData, async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('homeAdmin', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('homeAdmin', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
