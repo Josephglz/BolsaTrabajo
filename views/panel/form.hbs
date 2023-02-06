@@ -18,8 +18,8 @@
     <link rel="stylesheet" href="https://unpkg.com/tag-input-js@0.0.2/dist/styles.css" />
 
     <link rel="stylesheet" href="css/simple-tag-input.css" />
-    <script src="/js/simple-tag-input.js"></script>
-    
+    <script src="/js/vendor/simple-tag/simple-tag-input.js"></script>
+
 </head>
 
 <body class="w-full h-full bg-white dark:bg-[#232c38]">
@@ -142,7 +142,9 @@
 
             <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
                 <div class="group relative w-full pt-8 pb-0 translate-x-[41%] lg:translate-y-[25%]">
-                    <label for="txtRemote" class="absolute -translate-x-[30%] -translate-y-[120%] text-black dark:text-white">Trabajo remoto</label>
+                    <label for="txtRemote"
+                        class="absolute -translate-x-[30%] -translate-y-[120%] text-black dark:text-white">Trabajo
+                        remoto</label>
                     <div class="toggle slim colour">
                         <input id="txtRemote" class="toggle-checkbox hidden self-center" type="checkbox">
                         <label for="txtRemote"
@@ -151,7 +153,8 @@
                 </div>
                 <div class="group relative w-full py-6">
                     <label for="txtHour"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario de entrada</label>
+                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
+                        de entrada</label>
                     <input type="time" id="txtHour" name="eta"
                         class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
                     <span
@@ -160,7 +163,8 @@
                 </div>
                 <div class="group relative w-full py-6">
                     <label for="txtHour"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario de salida</label>
+                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
+                        de salida</label>
                     <input type="time" id="txtHour" name="eta"
                         class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
                     <span
@@ -171,7 +175,8 @@
 
             <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
                 <div class="group relative w-full pt-8 pb-0 translate-x-[41%] lg:translate-y-[25%]">
-                    <label for="txtApproved" class="absolute -translate-x-[19%] -translate-y-[120%] text-black dark:text-white">Aprobado</label>
+                    <label for="txtApproved"
+                        class="absolute -translate-x-[19%] -translate-y-[120%] text-black dark:text-white">Aprobado</label>
                     <div class="toggle slim colour">
                         <input id="txtApproved" class="toggle-checkbox hidden self-center" type="checkbox">
                         <label for="txtApproved"
@@ -195,7 +200,9 @@
                 <div class="group relative w-full py-6">
                     <label for="txtAct"
                         class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Actividades</label>
-                    <textarea name="txtAct" id="txtAct" class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 pt-2 textarea resize-ta" placeholder="Ingrese las actividades"></textarea>
+                    <textarea name="txtAct" id="txtAct"
+                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 pt-2 textarea resize-ta"
+                        placeholder="Ingrese las actividades"></textarea>
                     <span
                         class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
                         de ejemplo: Programar</span>
@@ -204,41 +211,68 @@
 
             <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
                 <div class="group relative w-full py-6">
-                    <label for="txtSoft" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades blandas</label>
-                    <input type="text" id="txtSoft" spellcheck="false" class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" />
-                    <button id="addSoft" class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(243, 244, 246)" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <label for="txtSoft"
+                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
+                        blandas</label>
+                    <input type="text" id="txtSoft" spellcheck="false"
+                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija las habilidades blandas"/>
+                    <button id="addSoft" onclick="toggleModal('modal-1')"
+                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </button>
                     <ul id="tagsSoft"></ul>
-                    <span class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
+                    <span
+                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                        de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
                 </div>
+                
                 <div class="group relative w-full py-6">
-                    <label for="txtHard" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades blandas</label>
-                    <input type="text" id="txtHard" spellcheck="false" class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" />
-                    <button id="addHard" class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(243, 244, 246)" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <label for="txtHard"
+                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
+                        duras</label>
+                    <input type="text" id="txtHard" spellcheck="false"
+                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija las habilidades duras"/>
+                    <button id="addHard" onclick="toggleModal('modal-2')"
+                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </button>
                     <ul id="tagsHard"></ul>
-                    <span class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
+                    <span
+                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Habilidades lingüísticas, Programación web, Habilidades de contabilidad, etc.</span>
                 </div>
+
                 <div class="group relative w-full py-6">
-                    <label for="txtKnow" class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades blandas</label>
-                    <input type="text" id="txtKnow" spellcheck="false" class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" />
-                    <button id="addKnow" class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center" type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="rgb(243, 244, 246)" class="w-6 h-6">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    <label for="txtKnow"
+                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Conocimientos</label>
+                    <input type="text" id="txtKnow" spellcheck="false"
+                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija los conocimientos"/>
+                    <button id="addKnow" onclick="toggleModal('modal-3')"
+                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </button>
                     <ul id="tagsKnow"></ul>
-                    <span class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
+                    <span
+                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                        de ejemplo: Digitales, Cientificos, Matematicos, etc.</span>
                 </div>
             </div>
 
-            
+
 
             <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
                 <div class="group relative w-full py-6">
@@ -278,16 +312,196 @@
                         de ejemplo: https://www.bolsa.com/</span>
                 </div>
             </div>
-            
+
             <div class="w-full h-10 pt-4 pb-16 flex justify-center align-middle">
                 <a href="/home" class="w-1/2">
                     <button type="button" id="btnSave"
-                        class="w-full self-center focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 transform transition-all duration-300 hover:scale-105">Guardar empleo
+                        class="w-full self-center focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 transform transition-all duration-300 hover:scale-105">Guardar
+                        empleo
                     </button>
                 </a>
             </div>
         </div>
     </form>
+
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+        id="modal-1">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <!--content-->
+            <div
+                class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <!--header-->
+                <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                    <h3 class="text-3xl font-semibold">
+                        Agregar nueva habilidad blanda
+                    </h3>
+                    <button
+                        class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onclick="toggleModal('modal-1')">
+                        <span
+                            class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                <!--body-->
+                <form id="formNewSoft" action="">
+                    <div class="relative p-6 flex-auto flex flex-col">
+                        <div class="flex flex-row">
+                            <div class="group relative w-full py-6">
+                                <label for="txtNewSoft"
+                                    class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nueva
+                                    habilidad blanda</label>
+                                <input id="txtNewSoft" type="text"
+                                    class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
+                                    placeholder="Ingrese la nueva habilidad blanda" />
+                                <span
+                                    class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                                    de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer-->
+                    <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <button
+                            class="text-red-500 border border-red-500 background-transparent font-bold uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-1')">
+                            Cancelar Cambios
+                        </button>
+                        <button id="btnSaveSoft"
+                            class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-1')">
+                            Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-1-backdrop"></div>
+    
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+        id="modal-2">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <!--content-->
+            <div
+                class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <!--header-->
+                <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                    <h3 class="text-3xl font-semibold">
+                        Agregar nueva habilidad dura
+                    </h3>
+                    <button
+                        class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onclick="toggleModal('modal-2')">
+                        <span
+                            class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                <!--body-->
+                <form id="formNewHard" action="">
+                    <div class="relative p-6 flex-auto flex flex-col">
+                        <div class="flex flex-row">
+                            <div class="group relative w-full py-6">
+                                <label for="txtNewHard"
+                                    class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nueva
+                                    habilidad dura</label>
+                                <input id="txtNewHard" type="text"
+                                    class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
+                                    placeholder="Ingrese la nueva habilidad dura" />
+                                <span
+                                    class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                                    de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer-->
+                    <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <button
+                            class="text-red-500 border border-red-500 background-transparent font-bold uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-2')">
+                            Cancelar Cambios
+                        </button>
+                        <button id="btnSaveHard"
+                            class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-2')">
+                            Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-2-backdrop"></div>
+
+    <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
+        id="modal-3">
+        <div class="relative w-auto my-6 mx-auto max-w-3xl">
+            <!--content-->
+            <div
+                class="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
+                <!--header-->
+                <div class="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+                    <h3 class="text-3xl font-semibold">
+                        Agregar nuevo conocimiento
+                    </h3>
+                    <button
+                        class="p-1 ml-auto bg-transparent border-0 text-black opacity-5 float-right text-3xl leading-none font-semibold outline-none focus:outline-none"
+                        onclick="toggleModal('modal-3')">
+                        <span
+                            class="bg-transparent text-black opacity-5 h-6 w-6 text-2xl block outline-none focus:outline-none">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                <!--body-->
+                <form id="formNewKnow" action="">
+                    <div class="relative p-6 flex-auto flex flex-col">
+                        <div class="flex flex-row">
+                            <div class="group relative w-full py-6">
+                                <label for="txtNewKnow"
+                                    class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nuevo conocimiento</label>
+                                <input id="txtNewKnow" type="text"
+                                    class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
+                                    placeholder="Ingrese el nuevo conocimiento" />
+                                <span
+                                    class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                                    de ejemplo: Digitales, Cientificos, Matematicos, etc.
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--footer-->
+                    <div class="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
+                        <button
+                            class="text-red-500 border border-red-500 background-transparent font-bold uppercase px-6 py-3 rounded text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-3')">
+                            Cancelar Cambios
+                        </button>
+                        <button id="btnSaveKnow"
+                            class="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                            type="button" onclick="toggleModal('modal-3')">
+                            Guardar Cambios
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-3-backdrop"></div>
+
+    <script type="text/javascript">
+        function toggleModal(modalID) {
+            document.getElementById(modalID).classList.toggle("hidden");
+            document.getElementById(modalID + "-backdrop").classList.toggle("hidden");
+            document.getElementById(modalID).classList.toggle("flex");
+            document.getElementById(modalID + "-backdrop").classList.toggle("flex");
+        }
+    </script>
 
     {{> VendorScripts}}
 
@@ -497,16 +711,16 @@
         });
 
 
-    // Dealing with Textarea Height
-    function calcHeight(value) {
-    let numberOfLineBreaks = (value.match(/\n/g) || []).length;
-    // min-height + lines x line-height + padding + border
-    let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2;
-    return newHeight;
-    }
+        // Dealing with Textarea Height
+        function calcHeight(value) {
+            let numberOfLineBreaks = (value.match(/\n/g) || []).length;
+            // min-height + lines x line-height + padding + border
+            let newHeight = 20 + numberOfLineBreaks * 20 + 12 + 2;
+            return newHeight;
+        }
 
-    let textarea = document.querySelector(".resize-ta");
-    calcHeight(textarea.value) + "px";
+        let textarea = document.querySelector(".resize-ta");
+        calcHeight(textarea.value) + "px";
     </script>
 </body>
 
