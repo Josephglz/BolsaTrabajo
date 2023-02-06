@@ -56,4 +56,60 @@ router.get('/form', async (req, res) =>{
     }
 })
 
+router.get('/ciudades', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('panel/towns', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/towns', {
+            data: []
+        })
+    }
+})
+
+router.get('/estados', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('panel/estates', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/estates', {
+            data: []
+        })
+    }
+})
+
+router.get('/carreras', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('panel/careers', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/careers', {
+            data: []
+        })
+    }
+})
+
+router.get('/usuarios', async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('panel/users', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/users', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
