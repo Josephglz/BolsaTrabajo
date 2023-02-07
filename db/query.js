@@ -69,8 +69,70 @@ const jobs = {
     },
 }
 
+const careers = {
+    getAll: async () => {
+        try {
+            const queryResult = await query(`SELECT * FROM CAREERS_T`);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    getData: async (id) => {
+        try {
+            const queryResult = await query(`SELECT * FROM CAREERS_T WHERE ID_C=?`, [id]);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    store: async (data) => {
+        try {
+            const queryResult = await query(`
+                INSERT INTO CAREERS_T 
+                    (NAME_C, ACRONYM_C, CREATION_C, UPDATE_C)
+                VALUES 
+                    (?, ?, NOW(), NOW())
+            `, [data.txtNewCareer, data.txtAcronymCareer]);
+            return {
+                status: 1,
+                message: 'Carrera agregada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    delete: async (id) => {
+        try {
+            const queryResult = await query(`
+                DELETE FROM CAREERS_T WHERE ID_C=?
+            `, [id]);
+            return {
+                status: 1,
+                message: 'Carrera eliminada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    update: async (data) => {
+        try {
+            const queryResult = await query(`
+                UPDATE CAREERS_T SET NAME_C=?, ACRONYM_C=?, UPDATE_C=NOW() WHERE ID_C=?
+            `, [data.txtEditCareer, data.txtEditAcronymCareer, data.id]);
+            return {
+                status: 1,
+                message: 'Carrera actualizada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
 
 module.exports = {
     users,
-    jobs
+    jobs,
+    careers
 };

@@ -24,34 +24,28 @@ router.get('/login', async (req, res) => {
     res.render('auth/login')
 })
 
-router.get('/panel', [mddwhome, mddLoadData], async (req, res) => {
-    res.render('panel/form')
+router.get('/panel', [mddwhome, mddLoadData], async (req, res) => { //Pendiente de vista
+    res.render('panel/empleo')
 })
 
-// router.get('/signup', async (req, res) =>{
-//     try {
-//         let data = await db.jobs.getAll()
-//         res.render('auth/signup', {
-//             jobs: data.data
-//         })
-//     } catch (error) {
-//         console.log(error);
-//         res.render('auth/signup', {
-//             data: []
-//         })
-//     }
-// })
-
-router.get('/form', async (req, res) =>{
+router.get('/empleos/crear', [mddwhome, mddLoadData], async (req, res) =>{
     try {
-        let data = await db.jobs.getAll()
-        res.render('panel/form', {
-            jobs: data.data
+        res.render('panel/empleo')
+    } catch (error) {
+        throw error
+    }
+})
+
+router.get('/panel/careers', [mddwhome, mddLoadData], async (req, res) =>{
+    try {
+        let careerData = (await db.careers.getAll()).data
+        res.render('panel/careers', {
+            careers: careerData
         })
     } catch (error) {
         console.log(error);
-        res.render('panel/form', {
-            data: []
+        res.render('panel/careers', {
+            careers: []
         })
     }
 })
@@ -79,20 +73,6 @@ router.get('/estados', async (req, res) =>{
     } catch (error) {
         console.log(error);
         res.render('panel/estates', {
-            data: []
-        })
-    }
-})
-
-router.get('/carreras', async (req, res) =>{
-    try {
-        let data = await db.jobs.getAll()
-        res.render('panel/careers', {
-            jobs: data.data
-        })
-    } catch (error) {
-        console.log(error);
-        res.render('panel/careers', {
             data: []
         })
     }
