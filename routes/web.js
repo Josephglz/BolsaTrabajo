@@ -64,16 +64,16 @@ router.get('/panel/cities', [mddwhome, mddLoadData], async (req, res) =>{
     }
 })
 
-router.get('/estados', async (req, res) =>{
+router.get('/panel/states', [mddwhome, mddLoadData], async (req, res) =>{
     try {
-        let data = await db.jobs.getAll()
-        res.render('panel/estates', {
-            jobs: data.data
+        let statesData = (await db.states.getAll()).data
+        res.render('panel/state', {
+            states: statesData
         })
     } catch (error) {
         console.log(error);
-        res.render('panel/estates', {
-            data: []
+        res.render('panel/state', {
+            states: []
         })
     }
 })

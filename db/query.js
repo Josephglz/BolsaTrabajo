@@ -191,10 +191,73 @@ const cities = {
     }
 }
 
+const states = {
+    getAll: async () => {
+        try {
+            const queryResult = await query(`SELECT * FROM STATES_T`);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    getData: async (id) => {
+        try {
+            const queryResult = await query(`SELECT * FROM STATES_T WHERE ID_ST=?`, [id]);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    store: async (data) => {
+        try {
+            const queryResult = await query(`
+                INSERT INTO STATES_T 
+                    (NAME_ST, CREATION_ST, UPDATE_ST)
+                VALUES 
+                    (?, NOW(), NOW())
+            `, [data.txtNameState]);
+            return {
+                status: 1,
+                message: 'Estado agregado correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    update: async (data) => {
+        try {
+            console.log(data);
+            const queryResult = await query(`
+                UPDATE STATES_T SET NAME_ST=?, UPDATE_ST=NOW() WHERE ID_ST=?
+            `, [data.txtEditState, data.id]);
+            return {
+                status: 1,
+                message: 'Estado actualizado correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    delete: async (id) => {
+        try {
+            const queryResult = await query(`
+                DELETE FROM STATES_T WHERE ID_ST=?
+            `, [id]);
+            return {
+                status: 1,
+                message: 'Estado eliminado correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
 
 module.exports = {
     users,
     jobs,
     careers,
-    cities
+    cities,
+    states
 };
