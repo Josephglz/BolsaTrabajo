@@ -130,9 +130,71 @@ const careers = {
     }
 }
 
+const cities = {
+    getAll: async () => {
+        try {
+            const queryResult = await query(`SELECT * FROM CITIES_T`);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    getData: async (id) => {
+        try {
+            const queryResult = await query(`SELECT * FROM CITIES_T WHERE ID_CS=?`, [id]);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    },
+    store: async (data) => {
+        try {
+            const queryResult = await query(`
+                INSERT INTO CITIES_T 
+                    (NAME_CS, CREATION_CS, UPDATE_CS)
+                VALUES 
+                    (?, NOW(), NOW())
+            `, [data.txtNewCity]);
+            return {
+                status: 1,
+                message: 'Ciudad agregada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    update: async (data) => {
+        try {
+            const queryResult = await query(`
+                UPDATE CITIES_T SET NAME_CS=?, UPDATE_CS=NOW() WHERE ID_CS=?
+            `, [data.txtEditCity, data.id]);
+            return {
+                status: 1,
+                message: 'Ciudad actualizada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    },
+    delete: async (id) => {
+        try {
+            const queryResult = await query(`
+                DELETE FROM CITIES_T WHERE ID_CS=?
+            `, [id]);
+            return {
+                status: 1,
+                message: 'Ciudad eliminada correctamente'
+            }
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
 
 module.exports = {
     users,
     jobs,
-    careers
+    careers,
+    cities
 };

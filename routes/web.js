@@ -25,7 +25,7 @@ router.get('/login', async (req, res) => {
 })
 
 router.get('/panel', [mddwhome, mddLoadData], async (req, res) => { //Pendiente de vista
-    res.render('panel/empleo')
+    res.render('panel/homeAdmin')
 })
 
 router.get('/empleos/crear', [mddwhome, mddLoadData], async (req, res) =>{
@@ -50,16 +50,16 @@ router.get('/panel/careers', [mddwhome, mddLoadData], async (req, res) =>{
     }
 })
 
-router.get('/ciudades', async (req, res) =>{
+router.get('/panel/cities', [mddwhome, mddLoadData], async (req, res) =>{
     try {
-        let data = await db.jobs.getAll()
-        res.render('panel/towns', {
-            jobs: data.data
+        let citiesData = (await db.cities.getAll()).data
+        res.render('panel/cities', {
+            cities: citiesData
         })
     } catch (error) {
         console.log(error);
-        res.render('panel/towns', {
-            data: []
+        res.render('panel/cities', {
+            cities: []
         })
     }
 })
