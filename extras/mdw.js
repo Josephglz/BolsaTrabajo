@@ -30,13 +30,15 @@ let mdwIsMobile = (req, res, next) => {
 }
 
 const mddLoadData = async (req, res, next) => {
-    try {
-        let userData = (await db.users.getUserData(req.session.idUser))
-        if (userData.data[0]) {
-            res.locals.Admin = true;
+    if(req.session.idUser) {
+        try {
+            let userData = (await db.users.getUserData(req.session.idUser))
+            if (userData.data[0]) {
+                res.locals.Admin = true;
+            }
+        } catch (err) {
+            throw err
         }
-    } catch (err) {
-        throw err
     }
     next();
 }

@@ -12,7 +12,7 @@ hbs.registerPartials(path.join(__dirname, './views/partials'))
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json({ limit: '100mb' }))
 app.use(sesion)
-// require('./extras/helpers')
+require('./extras/helpers')
 
 //STATIC DIRECTORIES
 app.use(express.static(path.join(__dirname, './assets')))
