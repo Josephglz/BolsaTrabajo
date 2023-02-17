@@ -22,316 +22,325 @@
 
 </head>
 
-<body class="w-full h-full bg-white dark:bg-[#232c38]">
+<body class="bg-white dark:bg-[#121212]">
 
     {{> Header}}
 
-    <form action="" id="formPrueba">
-        <div class="px-6 py-4 absolute top-14 w-full">
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full py-6">
-                    <label for="txtJob"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nombre
-                        del empleo</label>
-                    <input id="txtJob" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese el nombre del empleo" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Programador fullstack</span>
-                </div>
-                <div class="group relative w-full py-6 lg:col-span-2">
-                    <label for="txtDesc"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Descripción
-                        del empleo</label>
-                    <input id="txtDesc" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese la descripción del empleo" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Tiene la capacidad de desarrollar tareas de backend y frontend</span>
+    <div class="absolute top-14 px-6 py-4 w-full">
+        <form action="" id="formPrueba" class=" w-full h-full">
+            <div class="w-full h-full">
+                <div class="flex flex-wrap w-full lg:grid lg:grid-cols-3 lg:gap-6">
+                    <div class="group relative w-full py-6">
+                        <label for="txtJob"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nombre
+                            del empleo</label>
+                        <input id="txtJob" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese el nombre del empleo" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Programador fullstack</span>
+                    </div>
+                    <div class="group relative w-full py-6 lg:col-span-2">
+                        <label for="txtDesc"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Descripción
+                            del empleo</label>
+                        <input id="txtDesc" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese la descripción del empleo" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Tiene la capacidad de desarrollar tareas de backend y frontend</span>
+                    </div>
+
                 </div>
 
-            </div>
-
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full py-6">
-                    <label for="selectCareer"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Carrera</label>
-                    <select name="" id="selectCareer"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        aria-placeholder="Seleccione una carrera">
-                        {{#each careers}}
+                <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
+                    <div class="group relative w-full py-6">
+                        <label for="selectCareer"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Carrera</label>
+                        <select name="" id="selectCareer"
+                            class="peer h-10 w-full rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            aria-placeholder="Seleccione una carrera">
+                            {{#each careers}}
                             <option value="{{ID_C}}">{{NAME_C}}</option>
-                        {{/each}}
-                        {{!-- <option value="1">Ingeniería en Sistemas Computacionales</option>
-                        <option value="2">Ingeniería Industrial y de Sistemas</option>
-                        <option value="3">Ingeniería Civil</option>
-                        <option value="4">Ingeniería en Geomática</option>
-                        <option value="5">Ingeniería en Mercadotecnia</option>
-                        <option value="6">Ingeniería en Negocios</option> --}}
-                    </select>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtBag"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Bolsa
-                        de empleo</label>
-                    <input id="txtBag" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese la bolsa de empleo" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Linkedin</span>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtLang"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Lenguaje</label>
-                    <select name="" id="txtLang"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        aria-placeholder="Seleccione un lenguaje">
-                        {{#each language}}
+                            {{/each}}
+                            {{!-- <option value="1">Ingeniería en Sistemas Computacionales</option>
+                            <option value="2">Ingeniería Industrial y de Sistemas</option>
+                            <option value="3">Ingeniería Civil</option>
+                            <option value="4">Ingeniería en Geomática</option>
+                            <option value="5">Ingeniería en Mercadotecnia</option>
+                            <option value="6">Ingeniería en Negocios</option> --}}
+                        </select>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtBag"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Bolsa
+                            de empleo</label>
+                        <input id="txtBag" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese la bolsa de empleo" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Linkedin</span>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtLang"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Lenguaje</label>
+                        <select name="" id="txtLang"
+                            class="peer h-10 w-full rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            aria-placeholder="Seleccione un lenguaje">
+                            {{#each language}}
                             <option value="{{ID_L}}">{{NAME_L}}</option>
-                        {{/each}}
-                        {{!-- <option value="1">Español</option>
-                        <option value="2">Inglés</option>
-                        <option value="3">Francés</option>
-                        <option value="4">Alemán</option> --}}
-                    </select>
-                </div>
-            </div>
-
-            <div class="flex-wrap flex lg:grid lg:grid-cols-4 lg:gap-6">
-                <div class="group w-full py-6">
-                    <label for="txtSalarie"
-                        class="inline-block w-full text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Salario</label>
-                    <div class="relative flex items-center">
-                        <input id="txtSalarie" type="number" step="any"
-                            class="peer relative h-10 w-full rounded-md bg-gray-100 pl-6 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg" />
-                        <span
-                            class="material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">$</span>
+                            {{/each}}
+                            {{!-- <option value="1">Español</option>
+                            <option value="2">Inglés</option>
+                            <option value="3">Francés</option>
+                            <option value="4">Alemán</option> --}}
+                        </select>
                     </div>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: 12500.50</span>
                 </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtCompany"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Empresa</label>
-                    <input id="txtCompany" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese la empresa" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Grupo Carso</span>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtEstate"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Estado</label>
-                    <input id="txtEstate" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese el estado" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Tamaulipas</span>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtTown"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Ciudad</label>
-                    <input id="txtTownv" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese la ciudad" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Tampico</span>
-                </div>
-            </div>
 
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full pt-8 pb-0 translate-x-[41%] lg:translate-y-[25%]">
-                    <label for="txtRemote"
-                        class="absolute -translate-x-[30%] -translate-y-[120%] text-black dark:text-white">Trabajo
-                        remoto</label>
-                    <div class="toggle slim colour">
-                        <input id="txtRemote" class="toggle-checkbox hidden self-center" type="checkbox">
+                <div class="flex-wrap flex lg:grid lg:grid-cols-4 lg:gap-6">
+                    <div class="group w-full py-6">
+                        <label for="txtSalarie"
+                            class="inline-block w-full text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Salario</label>
+                        <div class="relative flex items-center">
+                            <input id="txtSalarie" type="number" step="any"
+                                class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300" />
+                            <span
+                                class="material-symbols-outlined absolute left-2 text-gray-700 dark:text-white transition-all duration-200 ease-in-out group-focus-within:text-blue-400">$</span>
+                        </div>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: 12500.50</span>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtCompany"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Empresa</label>
+                        <input id="txtCompany" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese la empresa" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Grupo Carso</span>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtEstate"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Estado</label>
+                        <input id="txtEstate" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese el estado" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Tamaulipas</span>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtTown"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Ciudad</label>
+                        <input id="txtTownv" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese la ciudad" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Tampico</span>
+                    </div>
+                </div>
+
+                <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6 relative">
+                    <div class="group relative w-full pt-8 pb-0 top-0">
                         <label for="txtRemote"
-                            class="toggle-label block w-12 h-4 rounded-full transition-color duration-150 ease-out"></label>
+                            class="absolute translate-x-[85%] -translate-y-[120%] text-black dark:text-white">Trabajo
+                            remoto</label>
+                        <div class="toggle slim colour">
+                            <input id="txtRemote" class="toggle-checkbox hidden self-center" type="checkbox">
+                            <label for="txtRemote"
+                                class="toggle-label block w-12 h-4 translate-x-[260%] rounded-full transition-color duration-150 ease-out"></label>
+                        </div>
                     </div>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtHour"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
-                        de entrada</label>
-                    <input type="time" id="txtHour" name="eta"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: 07:45 AM</span>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtHour"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
-                        de salida</label>
-                    <input type="time" id="txtHour" name="eta"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400">
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: 07:45 AM</span>
-                </div>
-            </div>
-
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full pt-8 pb-0 translate-x-[41%] lg:translate-y-[25%]">
-                    <label for="txtApproved"
-                        class="absolute -translate-x-[19%] -translate-y-[120%] text-black dark:text-white">Aprobado</label>
-                    <div class="toggle slim colour">
-                        <input id="txtApproved" class="toggle-checkbox hidden self-center" type="checkbox">
-                        <label for="txtApproved"
-                            class="toggle-label block w-12 h-4 rounded-full transition-color duration-150 ease-out"></label>
-                    </div>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtLine"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Giro
-                        empresarial</label>
-                    <select name="" id="txtLine"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        aria-placeholder="Giro empresarial">
-                        {{#each BTurn}}
-                            <option value="{{ID_BT}}">{{NAME_BT}}</option>
-                        {{/each}}
-                        {{!-- <option value="1">Transporte</option>
-                        <option value="2">Seguros</option>
-                        <option value="3">Turismo y cultura</option>
-                        <option value="4">Servicios públicos</option>
-                        <option value="5">Servicios privados</option> --}}
-                    </select>
-                </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtAct"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Actividades</label>
-                    <textarea name="txtAct" id="txtAct"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 pt-2 textarea resize-ta"
-                        placeholder="Ingrese las actividades"></textarea>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Programar</span>
-                </div>
-            </div>
-
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full py-6">
-                    <label for="txtSoft"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
-                        blandas</label>
-                    <input type="text" id="txtSoft" spellcheck="false"
-                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija las habilidades blandas"/>
-                    <button id="addSoft" onclick="toggleModal('modal-1')"
-                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </button>
-                    <ul id="tagsSoft"></ul>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
-                </div>
-                
-                <div class="group relative w-full py-6">
-                    <label for="txtHard"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
-                        duras</label>
-                    <input type="text" id="txtHard" spellcheck="false"
-                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija las habilidades duras"/>
-                    <button id="addHard" onclick="toggleModal('modal-2')"
-                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </button>
-                    <ul id="tagsHard"></ul>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Habilidades lingüísticas, Programación web, Habilidades de contabilidad, etc.</span>
-                </div>
-
-                <div class="group relative w-full py-6">
-                    <label for="txtKnow"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Conocimientos</label>
-                    <input type="text" id="txtKnow" spellcheck="false"
-                        class="peer h-10 w-full min-h-min rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400" placeholder="Elija los conocimientos"/>
-                    <button id="addKnow" onclick="toggleModal('modal-3')"
-                        class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
-                        type="button">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="rgb(243, 244, 246)" class="w-6 h-6 fill-blue-400 dark:fill-blue-400">
-                            <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-                        </svg>
-                    </button>
-                    <ul id="tagsKnow"></ul>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: Digitales, Cientificos, Matematicos, etc.</span>
-                </div>
-            </div>
-
-
-
-            <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
-                <div class="group relative w-full py-6">
-                    <label for="txtEmail"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Corro
-                        electrónico</label>
-                    <input id="txtEmail" type="email"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese el correo electrónico" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: usuario@dominio.extensión</span>
-                </div>
-                <div class="group w-full py-6">
-                    <label for="txtTel"
-                        class="inline-block w-full text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Celular</label>
-                    <div class="relative flex items-center">
-                        <input id="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel"
-                            class="peer relative h-10 w-full rounded-md bg-gray-100 pl-14 pr-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400 focus:drop-shadow-lg"
-                            placeholder="1112223344" />
+                    <div class="group relative w-full py-6">
+                        <label for="txtHour"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
+                            de entrada</label>
+                        <input type="time" id="txtHour" name="eta"
+                            class="peer h-10 w-full rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300">
                         <span
-                            class="material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">+52
-                            1</span>
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: 07:45 AM</span>
                     </div>
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: 8331112233</span>
+                    <div class="group relative w-full py-6">
+                        <label for="txtHour"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Horario
+                            de salida</label>
+                        <input type="time" id="txtHour" name="eta"
+                            class="peer h-10 w-full rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300">
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: 07:45 AM</span>
+                    </div>
                 </div>
-                <div class="group relative w-full py-6">
-                    <label for="txtLink"
-                        class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Link</label>
-                    <input id="txtLink" type="text"
-                        class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
-                        placeholder="Ingrese el link" />
-                    <span
-                        class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
-                        de ejemplo: https://www.bolsa.com/</span>
-                </div>
-            </div>
 
-            <div class="w-full h-10 pt-4 pb-16 flex justify-center align-middle">
-                <a href="/home" class="w-1/2">
-                    <button type="button" id="btnSave"
-                        class="w-full self-center focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 transform transition-all duration-300 hover:scale-105">Guardar
-                        empleo
-                    </button>
-                </a>
+                <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6 relative">
+                    <div class="group relative w-full pt-8 pb-0">
+                        <label for="txtApproved"
+                            class="absolute translate-x-[155%] -translate-y-[120%] text-black dark:text-white">Aprobado</label>
+                        <div class="toggle slim colour">
+                            <input id="txtApproved" class="toggle-checkbox hidden self-center" type="checkbox">
+                            <label for="txtApproved"
+                                class="toggle-label block w-12 h-4 translate-x-[260%] rounded-full transition-color duration-150 ease-out"></label>
+                        </div>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtLine"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Giro
+                            empresarial</label>
+                        <select name="" id="txtLine"
+                            class="peer h-10 w-full rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            aria-placeholder="Giro empresarial">
+                            {{#each BTurn}}
+                            <option value="{{ID_BT}}">{{NAME_BT}}</option>
+                            {{/each}}
+                            {{!-- <option value="1">Transporte</option>
+                            <option value="2">Seguros</option>
+                            <option value="3">Turismo y cultura</option>
+                            <option value="4">Servicios públicos</option>
+                            <option value="5">Servicios privados</option> --}}
+                        </select>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtAct"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Actividades</label>
+                        <textarea name="txtAct" id="txtAct"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300 pt-2 textarea resize-ta"
+                            placeholder="Ingrese las actividades"></textarea>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Programar</span>
+                    </div>
+                </div>
+
+                <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
+                    <div class="group relative w-full py-6">
+                        <label for="txtSoft"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
+                            blandas</label>
+                        <input type="text" id="txtSoft" spellcheck="false"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Elija las habilidades blandas" />
+                        <button id="addSoft" onclick="toggleModal('modal-1')"
+                            class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                            type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="rgb(243, 244, 246)"
+                                class="w-6 h-6 fill-blue-400 dark:fill-blue-400 stroke-white dark:stroke-[#1F1F1F]">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                        <ul id="tagsSoft"></ul>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Creatividad, Inteligencia emocional, Liderazgo, etc.</span>
+                    </div>
+
+                    <div class="group relative w-full py-6">
+                        <label for="txtHard"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Habilidades
+                            duras</label>
+                        <input type="text" id="txtHard" spellcheck="false"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Elija las habilidades duras" />
+                        <button id="addHard" onclick="toggleModal('modal-2')"
+                            class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                            type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="rgb(243, 244, 246)"
+                                class="w-6 h-6 fill-blue-400 dark:fill-blue-400 stroke-white dark:stroke-[#1F1F1F]">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                        <ul id="tagsHard"></ul>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Habilidades
+                            lingüísticas, Programación web, Habilidades de contabilidad, etc.</span>
+                    </div>
+
+                    <div class="group relative w-full py-6">
+                        <label for="txtKnow"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Conocimientos</label>
+                        <input type="text" id="txtKnow" spellcheck="false"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Elija los conocimientos" />
+                        <button id="addKnow" onclick="toggleModal('modal-3')"
+                            class="bg-blue-400 absolute top-24 right-0 h-10 w-14 rounded-r-md transform -translate-y-12 -translate-x-0 bg-transparent flex justify-center items-center"
+                            type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="rgb(243, 244, 246)"
+                                class="w-6 h-6 fill-blue-400 dark:fill-blue-400 stroke-white dark:stroke-[#1F1F1F]">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </button>
+                        <ul id="tagsKnow"></ul>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: Digitales, Cientificos, Matematicos, etc.</span>
+                    </div>
+                </div>
+
+
+
+                <div class="flex-wrap flex lg:grid lg:grid-cols-3 lg:gap-6">
+                    <div class="group relative w-full py-6">
+                        <label for="txtEmail"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Corro
+                            electrónico</label>
+                        <input id="txtEmail" type="email"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese el correo electrónico" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: usuario@dominio.extensión</span>
+                    </div>
+                    <div class="group w-full py-6">
+                        <label for="txtTel"
+                            class="inline-block w-full text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Celular</label>
+                        <div class="relative flex items-center">
+                            <input id="txtTel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" type="tel"
+                                class="peer relative h-10 w-full pl-14 pr-4 rounded-md text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                                placeholder="1112223344" />
+                            <span
+                                class="material-symbols-outlined absolute left-2 transition-all duration-200 ease-in-out group-focus-within:text-blue-400 text-black dark:text-white">+52
+                                1</span>
+                        </div>
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: 8331112233</span>
+                    </div>
+                    <div class="group relative w-full py-6">
+                        <label for="txtLink"
+                            class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Link</label>
+                        <input id="txtLink" type="text"
+                            class="peer h-10 w-full rounded-md px-4 text-gray-700 dark:text-white placeholder-shown:text-xs md:placeholder-shown:text-base text-xs md:text-base align-middle placeholder-gray-500 bg-white border dark:bg-[#1F1F1F] dark:border-gray-600 dark:placeholder-gray-400 focus:border-blue-400 dark:focus:border-indigo-300 focus:ring-opacity-40 focus:outline-none focus:ring-1 focus:ring-blue-300 dark:focus:ring-indigo-300"
+                            placeholder="Ingrese el link" />
+                        <span
+                            class="absolute block pt-1 text-xs font-semibold text-gray-500 opacity-0 transition-all duration-200 ease-in-out group-focus-within:opacity-100">Formato
+                            de ejemplo: https://www.bolsa.com/</span>
+                    </div>
+                </div>
+
+                <div class="w-full h-10 pt-4 pb-16 flex justify-center align-middle">
+                    <a href="/home" class="w-1/2">
+                        <button type="button" id="btnSave"
+                            class="w-full self-center focus:outline-none text-white text-sm py-2.5 px-5 rounded-md bg-gradient-to-r from-blue-400 to-blue-600 transform transition-all duration-300 hover:scale-105">Guardar
+                            empleo
+                        </button>
+                    </a>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 
     <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
         id="modal-1">
@@ -389,7 +398,7 @@
         </div>
     </div>
     <div class="hidden opacity-25 fixed inset-0 z-40 bg-black" id="modal-1-backdrop"></div>
-    
+
     <div class="hidden overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none justify-center items-center"
         id="modal-2">
         <div class="relative w-auto my-6 mx-auto max-w-3xl">
@@ -473,7 +482,8 @@
                         <div class="flex flex-row">
                             <div class="group relative w-full py-6">
                                 <label for="txtNewKnow"
-                                    class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nuevo conocimiento</label>
+                                    class="block w-full pb-1 text-sm font-medium text-gray-500 transition-all duration-200 ease-in-out group-focus-within:text-blue-400">Nuevo
+                                    conocimiento</label>
                                 <input id="txtNewKnow" type="text"
                                     class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
                                     placeholder="Ingrese el nuevo conocimiento" />
