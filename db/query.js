@@ -2,18 +2,15 @@ const {
     pool
 } = require('./connection');
 const util = require('util');
-const Cryptr = require('cryptr');
-
-const cryptr = new Cryptr('6lGeoNFgUnjyCjsT', {saltLength: 10 });
 const query = util.promisify(pool.query).bind(pool);
 
 const result = (resultado) => {
-    if(resultado.length > 0){
+    if (resultado.length > 0) {
         return {
             status: 1,
             data: resultado
         }
-    }else{
+    } else {
         return {
             status: 0,
             data: []
@@ -25,14 +22,12 @@ const result = (resultado) => {
 const users = {
     validate: async (data) => {
         try {
-            const queryResult = await query(`SELECT * FROM USERS_T WHERE MAIL_U=? AND STATUS_U <> 2`, [data.txtEmail]);
-            if(queryResult.length) {
-                if(cryptr.decrypt(queryResult[0].PASSWORD_U) == data.txtPassword) {
-                    return {
-                        status: 1,
-                        message: 'Usuario valido',
-                        data: queryResult[0]
-                    }
+            const queryResult = await query(`SELECT * FROM USERS_T WHERE MAIL_U=? AND PASSWORD_U=?`, [data.txtEmail, data.txtPassword]);
+            if (queryResult.length) {
+                return {
+                    status: 1,
+                    message: 'Usuario valido',
+                    data: queryResult[0]
                 }
             } else {
                 return {
@@ -67,6 +62,14 @@ const jobs = {
             throw error
         }
     },
+    getBTurn: async () => {
+        try {
+            let queryResult = await query(`SELECT * FROM BTURN_T`);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    }
 }
 
 const careers = {

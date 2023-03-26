@@ -2,10 +2,10 @@ var session = require('express-session')
 var MySQLStore = require('express-mysql-session')(session)
 
 const sesionesConfig = {
-    host: 'sql174.main-hosting.eu',
-    user: 'u800139032_sa',
-    password: 'PSxQGhSQhzD0rfD78plFx7&9',
-    database: 'u800139032_bolsatrabajo',
+    host: '134.209.66.194',
+    user: 'bolsa',
+    password: 'PSxQGhSQhz9@',
+    database: 'bolsatrabajo',
 
     clearExpired: true,
 	checkExpirationInterval: 1500000,
@@ -15,11 +15,11 @@ const sesionesConfig = {
 	endConnectionOnClose: true,
 	charset: 'utf8mb4_bin',
 	schema: {
-		tableName: 'SESIONES_T',
+		tableName: 'SESSIONS_T',
 		columnNames: {
-			session_id: 'SESIONES_ID_S',
-			expires: 'FECHA_EXP_S',
-			data: 'DATOS_S'
+			session_id: 'SESSION_ID',
+			expires: 'EXP_DATE',
+			data: 'DATA'
 		}
 	}
 }

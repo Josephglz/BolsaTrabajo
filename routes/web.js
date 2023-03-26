@@ -9,6 +9,7 @@ router.use(express.json());
 router.get('/', mddLoadData, async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
+        console.log(data);
         res.render('home', {
             jobs: data.data
         })
@@ -24,15 +25,36 @@ router.get('/login', async (req, res) => {
     res.render('auth/login')
 })
 
-router.get('/panel', [mddwhome, mddLoadData], async (req, res) => { //Pendiente de vista
-    res.render('panel/homeAdmin')
+router.get('/panel', [mddwhome, mddLoadData], async (req, res) => {
+    try {
+        let data = (await db.jobs.getAll()).data
+        res.render('panel/homeAdmin', {
+            jobs: data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/homeAdmin', {
+            jobs: [],
+            error: 1
+        })
+    }
 })
 
 router.get('/empleos/crear', [mddwhome, mddLoadData], async (req, res) =>{
     try {
-        res.render('panel/empleo')
+        let careers = (await db.careers.getAll()).data
+        let bTurn = (await db.jobs.getBTurn()).data
+        
+        res.render('panel/empleo', {
+            careers: careers,
+            bTurn: bTurn
+        })
     } catch (error) {
-        throw error
+        console.log(error);
+        res.render('panel/empleo', {
+            careers: [],
+            bTurn: []
+        })
     }
 })
 

@@ -6,6 +6,7 @@ btnLogin.addEventListener('click', function(e) {
 })
 
 function validateCredentials() {
+    allowButton(btnLogin)
     var form = document.getElementById('formLogin');
     var formData = new FormData(form);
     var data = {}

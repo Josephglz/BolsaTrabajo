@@ -11,7 +11,7 @@
         content="Bolsa de Trabajo dedicada a egresados de la Universidad Autonoma de Tamaulipas con el objetivo de posicionarse en una empresa.">
     <meta name="keywords" content="Bolsa de Trabajo, UAT, Universidad Autonoma de Tamaulipas, Egresados, Empleo, Trabajo, Posicionarse, Empresa, empleo, trabajo, 
     tamaulipas, tampico, madero, altamira, mexico, ciudad de mexico, universitario, universidad, trabajar">
-    <title>Bolsa de Empleo - Form</title>
+    <title>Bolsa de Empleo - Nuevo empleo</title>
     {{> HeaderStyles}}
     <link rel="stylesheet" href="css/main.css">
     <script src="https://unpkg.com/tag-input-js@0.0.2/dist/index.js" type="text/javascript"></script>
@@ -64,12 +64,6 @@
                         {{#each careers}}
                             <option value="{{ID_C}}">{{NAME_C}}</option>
                         {{/each}}
-                        {{!-- <option value="1">Ingeniería en Sistemas Computacionales</option>
-                        <option value="2">Ingeniería Industrial y de Sistemas</option>
-                        <option value="3">Ingeniería Civil</option>
-                        <option value="4">Ingeniería en Geomática</option>
-                        <option value="5">Ingeniería en Mercadotecnia</option>
-                        <option value="6">Ingeniería en Negocios</option> --}}
                     </select>
                 </div>
                 <div class="group relative w-full py-6">
@@ -89,13 +83,10 @@
                     <select name="" id="txtLang"
                         class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
                         aria-placeholder="Seleccione un lenguaje">
-                        {{#each language}}
-                            <option value="{{ID_L}}">{{NAME_L}}</option>
-                        {{/each}}
-                        {{!-- <option value="1">Español</option>
+                        <option value="1">Español</option>
                         <option value="2">Inglés</option>
                         <option value="3">Francés</option>
-                        <option value="4">Alemán</option> --}}
+                        <option value="4">Alemán</option>
                     </select>
                 </div>
             </div>
@@ -196,14 +187,9 @@
                     <select name="" id="txtLine"
                         class="peer h-10 w-full rounded-md bg-gray-100 px-4 font-thin outline-none drop-shadow-sm transition-all duration-200 ease-in-out focus:bg-white focus:ring-2 focus:ring-blue-400"
                         aria-placeholder="Giro empresarial">
-                        {{#each BTurn}}
-                            <option value="{{ID_BT}}">{{NAME_BT}}</option>
+                        {{#each bTurn}}
+                            <option value="{{ID_B}}">{{NAME_B}}</option>
                         {{/each}}
-                        {{!-- <option value="1">Transporte</option>
-                        <option value="2">Seguros</option>
-                        <option value="3">Turismo y cultura</option>
-                        <option value="4">Servicios públicos</option>
-                        <option value="5">Servicios privados</option> --}}
                     </select>
                 </div>
                 <div class="group relative w-full py-6">

@@ -11,3 +11,9 @@ function validatePassword(pass) {
 function validateTextLength(text, min, max) {
     return text.length >= min && text.length <= max 
 }
+
+function allowButton(btn) {
+    setTimeout(() => {
+        btn.disabled = false
+    }, 2000);
+}

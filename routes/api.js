@@ -2,13 +2,10 @@ const express = require('express')
 const router = express.Router()
 const db = require('../db/query')
 router.use(express.json());
-const Cryptr = require('cryptr');
-
-const cryptr = new Cryptr('6lGeoNFgUnjyCjsT', {saltLength: 10 });
 
 router.post('/api/users/auth/validate', async (req, res) => {
     try {
-        const result = await db.users.validate(req.body);
+        let result = (await db.users.validate(req.body));
         if(result.status) {
             if(result.data.STATUS_U == 1) {
                 req.session.idUser = result.data.ID_U

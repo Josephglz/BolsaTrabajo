@@ -1,8 +1,8 @@
 const mysqlConfig = {
-    host: 'sql174.main-hosting.eu',
-    user: 'u800139032_sa',
-    password: 'PSxQGhSQhzD0rfD78plFx7&9',
-    database: 'u800139032_bolsatrabajo',
+    host: '134.209.66.194',
+    user: 'bolsa',
+    password: 'PSxQGhSQhz9@',
+    database: 'bolsatrabajo',
     insecureAuth : true
 }
 
