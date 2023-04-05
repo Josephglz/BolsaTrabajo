@@ -43,10 +43,10 @@
                             <th class="px-4 py-2 text-center">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody class="text-sm font-normal text-gray-700 dark:text-white dark:hover:text-black">
+                    <tbody class="text-sm font-normal text-gray-700 dark:text-white">
                         {{#if careers}}
                             {{#each careers}}
-                                <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
+                                <tr class="hover:bg-gray-400 border-b border-gray-200 py-10 dark:hover:bg-zinc-800">
                                     <td class="px-4 py-4">{{ID_C}}</td>
                                     <td class="px-4 py-4">{{NAME_C}}</td>
                                     <td class="px-4 py-4">{{ACRONYM_C}}</td>
@@ -57,7 +57,7 @@
                                 </tr>
                             {{/each}}
                         {{else}}
-                            <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
+                            <tr class="hover:bg-gray-400 border-b border-gray-200 py-10 dark:hover:bg-zinc-800">
                                 <td class="px-4 py-4 text-center text-lg text-slate-500" colspan="4">No hay registros disponibles</td>
                             </tr>
                         {{/if}}
