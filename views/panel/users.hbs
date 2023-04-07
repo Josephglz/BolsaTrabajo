@@ -21,20 +21,20 @@
     <script src="/js/vendor/simple-tag/simple-tag-input.js"></script>
 </head>
 
-<body class="w-full h-full bg-white dark:bg-[#232c38]">
+<body class="w-full h-full bg-white dark:bg-[#121212]">
     {{> Header}}
 
     <div class="px-6 py-4 absolute top-14 w-full my-4">
-        <div class="bg-white pb-4 px-4 rounded-md w-full">
+        <div class="bg-white dark:bg-[#1E1E1E] pb-4 px-4 rounded-md w-full">
             <div class="flex flex-row justify-between w-full pt-4">
-                <p class="ml-3"> Tabla de Usuarios</p>
+                <p class="ml-3 text-black dark:text-white"> Tabla de Usuarios</p>
                 <button type="button" id="btnNuevaCarrera" onclick="toggleModal('modal-1')"
                     class="bg-blue-400 rounded px-4 py-2 text-sm mb-4">Agregar nuevo Usuario</button>
             </div>
             <div class="w-full flex justify-start px-2 mt-2">
                 <div class="w-full sm:w-64 inline-block relative ">
-                    <input type="text" name="" id="txtBuscarCiudad"
-                        class="leading-snug border border-gray-300 block w-full appearance-none bg-gray-100 text-sm text-gray-600 py-1 px-4 pl-8 rounded-lg"
+                    <input type="text" name="" id="txtBuscarUsuario"
+                        class="leading-snug border bg-white dark:bg-[#1E1E1E] border-gray-300 block w-full appearance-none text-sm text-gray-600 dark:text-white py-1 px-4 pl-8 rounded-lg"
                         placeholder="Buscar" />
                     <div
                         class="pointer-events-none absolute pl-3 inset-y-0 left-0 flex items-center px-2 text-gray-300">
@@ -47,9 +47,9 @@
                 </div>
             </div>
             <div class="overflow-x-auto mt-6">
-                <table class="table-auto border-collapse w-full">
+                <table class="table-auto border-collapse w-full text-black dark:text-white">
                     <thead>
-                        <tr class="rounded-lg text-sm font-medium text-gray-700 text-left" style="font-size: 0.9674rem">
+                        <tr class="ounded-lg text-sm font-medium text-gray-700 text-left bg-[#F8F8F8] dark:bg-[#2E2E2E] dark:text-white" style="font-size: 0.9674rem">
                             <th class="px-4 py-2 bg-gray-200 " style="background-color:#f8f8f8">Id</th>
                             <th class="px-4 py-2 " style="background-color:#f8f8f8">Nombre del Usuario</th>
                             <th class="px-4 py-2 " style="background-color:#f8f8f8">Correo electrónico del Usuario</th>
@@ -57,8 +57,8 @@
                             <th class="px-4 py-2 text-center" style="background-color:#f8f8f8">Acciones</th>
                         </tr>
                     </thead>
-                    <tbody class="text-sm font-normal text-gray-700">
-                        <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
+                    <tbody class="text-sm font-normal text-gray-700 dark:text-white">
+                        <tr class="hover:bg-gray-400 border-b border-gray-200 py-10 dark:hover:bg-zinc-800">
                             <td class="px-4 py-4">1</td>
                             <td class="px-4 py-4">Joseph Ian Gonzalez Cabrales</td>
                             <td class="px-4 py-4">Joseph@gmail.com</td>
@@ -66,11 +66,11 @@
                             <td class="px-4 py-4 text-center">
                                 <button type="button" id="btnEditarCiudad1" onclick="toggleModal('modal-2')"
                                     class="bg-blue-400 rounded px-4 py-2 text-sm mb-4">Editar</button>
-                                <button type="button" id="btnEliminarCiudad1"
+                                <button type="button" id="btnEliminarUser1"
                                     class="bg-red-400 rounded px-4 py-2 text-sm mb-4">Eliminar</button>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
+                        <tr class="hover:bg-gray-400 border-b border-gray-200 py-10 dark:hover:bg-zinc-800">
                             <td class="px-4 py-4">2</td>
                             <td class="px-4 py-4">NAVAGOD</td>
                             <td class="px-4 py-4">NavaGOD@GOD.com</td>
@@ -78,11 +78,11 @@
                             <td class="px-4 py-4 text-center">
                                 <button type="button" id="btnEditarCiudad1" onclick="toggleModal('modal-2')"
                                     class="bg-blue-400 rounded px-4 py-2 text-sm mb-4">Editar</button>
-                                <button type="button" id="btnEliminarCiudad1"
+                                <button type="button" id="btnEliminarUser2"
                                     class="bg-red-400 rounded px-4 py-2 text-sm mb-4">Eliminar</button>
                             </td>
                         </tr>
-                        <tr class="hover:bg-gray-100 border-b border-gray-200 py-10">
+                        <tr class="hover:bg-gray-400 border-b border-gray-200 py-10 dark:hover:bg-zinc-800">
                             <td class="px-4 py-4">3</td>
                             <td class="px-4 py-4">FelKodo</td>
                             <td class="px-4 py-4">ElMataviejitas@69.com</td>
@@ -90,7 +90,7 @@
                             <td class="px-4 py-4 text-center">
                                 <button type="button" id="btnEditarCiudad1" onclick="toggleModal('modal-2')"
                                     class="bg-blue-400 rounded px-4 py-2 text-sm mb-4">Editar</button>
-                                <button type="button" id="btnEliminarCiudad1"
+                                <button type="button" id="btnEliminarUser3"
                                     class="bg-red-400 rounded px-4 py-2 text-sm mb-4">Eliminar</button>
                             </td>
                         </tr>
