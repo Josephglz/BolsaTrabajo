@@ -137,4 +137,18 @@ router.get('/home-admin', mddLoadData, async (req, res) =>{
     }
 })
 
+router.get('/extras', mddLoadData, async (req, res) =>{
+    try {
+        let data = await db.jobs.getAll()
+        res.render('panel/extras', {
+            jobs: data.data
+        })
+    } catch (error) {
+        console.log(error);
+        res.render('panel/extras', {
+            data: []
+        })
+    }
+})
+
 module.exports = router
