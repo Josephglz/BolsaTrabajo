@@ -44,16 +44,25 @@ router.get('/empleos/crear', [mddwhome, mddLoadData], async (req, res) =>{
     try {
         let careers = (await db.careers.getAll()).data
         let bTurn = (await db.jobs.getBTurn()).data
-        
+        let statesData = (await db.states.getAll()).data
+        let citiesData = (await db.cities.getAll()).data
+        let softSkills = (await db.softSkills.getAll()).data
+
         res.render('panel/empleo', {
             careers: careers,
-            bTurn: bTurn
+            bTurn: bTurn,
+            states: statesData,
+            cities: citiesData,
+            softSkills: softSkills
         })
     } catch (error) {
         console.log(error);
         res.render('panel/empleo', {
             careers: [],
-            bTurn: []
+            bTurn: [],
+            states: [],
+            cities: [],
+            softSkills: []
         })
     }
 })
@@ -100,7 +109,7 @@ router.get('/panel/states', [mddwhome, mddLoadData], async (req, res) =>{
     }
 })
 
-router.get('/usuarios', async (req, res) =>{
+router.get('/usuarios', [mddwhome, mddLoadData], async (req, res) =>{
     try {
         let data = await db.jobs.getAll()
         res.render('panel/users', {

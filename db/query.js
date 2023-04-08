@@ -256,11 +256,23 @@ const states = {
     }
 }
 
+const softSkills = {
+    getAll: async () => {
+        try {
+            const queryResult = await query(`SELECT * FROM SOFTSKILLS_T`);
+            return result(queryResult);
+        } catch (error) {
+            throw error
+        }
+    }
+}
+
 
 module.exports = {
     users,
     jobs,
     careers,
     cities,
-    states
+    states,
+    softSkills
 };
